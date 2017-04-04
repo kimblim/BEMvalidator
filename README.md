@@ -1,6 +1,9 @@
 # BEMvalidator
 A bookmarklet for testing BEM syntax in HTML files
 
+## Note
+For now there are exceptions built into the code as I'm using it on a specific project. Those will be removed later.
+
 ## Code
 
 ```javascript
@@ -13,10 +16,11 @@ Chrome: Right-click on the bookmarks bar and choose "Add Page". Give the bookmar
 (More browsers to come)
 
 ## Usage
-Visit a page, click the bookmarklet. It's that simple, and that's the reason I was able to make it. 
+Visit a page, click the bookmarklet. Nothing more to it. 
 
 ## To-do
 * Add browsers in "Install section"
+* Remove exceptions
 
 ## License
 Please do with it what you want — if you have any ideas or improvements to the code (by all means: I'm no genius, so there's a huge chance that your code is better than mine) do a pull request or hit me at Twitter: @therealkimblim

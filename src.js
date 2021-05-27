@@ -104,36 +104,27 @@ for (i = 0; i < allEls.length; i++) {
     var modifier = currentClass.indexOf("--") > -1
     // yes
     if (modifier) {
-      // if it's prefixed with "u-" (utility), "w--" (width delimiter), "icon__" (icons) skip it
-      if (
-        !(
-          currentClass.indexOf("u-") == 0 ||
-          currentClass.indexOf("w--") == 0 ||
-          currentClass.indexOf("icon") == 0
-        )
-      ) {
-        // double modifier
-        var doubleModifier = currentClass.match(/[\w-]+--[\w-]+--[\w-]+/g)
-        if (doubleModifier != null) {
-          logMsgContent +=
-            "<li class='bem-resultpane__item'><strong>Error:</strong> <code>" +
-            currentClass +
-            "</code> is not a valid BEM class. Two <strong>Modifiers</strong> on the same class is not allowed.</li>"
-          currentElement.style.outline = "2px solid #f00"
-          errorsAmount++
-        }
-        // check if the default class is present ("element element--modifier")
-        var elementClass = currentClass.split("--")[0]
-        if (!elClassSet.includes(elementClass)) {
-          logMsgContent +=
-            "<li class='bem-resultpane__item'><strong>Error:</strong> <code>" +
-            currentClass +
-            "</code> is included without it's default <strong>Element</strong> (" +
-            elementClass +
-            ").</li>"
-          currentElement.style.outline = "2px solid #f00"
-          errorsAmount++
-        }
+      // double modifier
+      var doubleModifier = currentClass.match(/[\w-]+--[\w-]+--[\w-]+/g)
+      if (doubleModifier != null) {
+        logMsgContent +=
+          "<li class='bem-resultpane__item'><strong>Error:</strong> <code>" +
+          currentClass +
+          "</code> is not a valid BEM class. Two <strong>Modifiers</strong> on the same class is not allowed.</li>"
+        currentElement.style.outline = "2px solid #f00"
+        errorsAmount++
+      }
+      // check if the default class is present ("element element--modifier")
+      var elementClass = currentClass.split("--")[0]
+      if (!elClassSet.includes(elementClass)) {
+        logMsgContent +=
+          "<li class='bem-resultpane__item'><strong>Error:</strong> <code>" +
+          currentClass +
+          "</code> is included without it's default <strong>Element</strong> (" +
+          elementClass +
+          ").</li>"
+        currentElement.style.outline = "2px solid #f00"
+        errorsAmount++
       }
     }
   }

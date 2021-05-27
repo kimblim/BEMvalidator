@@ -16,4 +16,7 @@ javascript:var css="",body=document.querySelector("body"),style=document.createE
 
 3. Visit any page that uses BEM for naming purposes and click the bookmarklet.
 ## License
-Please do with it what you want — if you have any ideas or improvements to the code (by all means: I'm no genius, so there's a huge chance that your code is better than mine) do a pull request or hit me at Twitter: @therealkimblim
+Please do with it what you want — if you have any ideas or improvements to the code (by all means: I'm no genius, so there's a huge chance that your code is better than mine) please do create an issue or a pull request, alternatively ping me on Twitter: @overflowhidden.
+
+## Resource
+If you want to get better at BEM, all you need to do is [read this article by Harry Roberts](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/).

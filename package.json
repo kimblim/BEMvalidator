@@ -1,0 +1,23 @@
+{
+  "name": "bemvalidator",
+  "version": "0.0.1",
+  "description": "A bookmarklet for testing BEM syntax in HTML files",
+  "main": "index.js",
+  "scripts": {
+    "minifyjs": "uglifyjs src.js --compress -o src-min.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimblim/BEMvalidator.git"
+  },
+  "author": "Kim Johannesen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kimblim/BEMvalidator/issues"
+  },
+  "homepage": "https://github.com/kimblim/BEMvalidator#readme",
+  "devDependencies": {
+    "uglify-js": "^3.13.8"
+  }
+}
